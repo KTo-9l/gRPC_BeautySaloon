@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.sillysociety.beautysaloon";
+
+package org.sillysociety.beautysaloon;
+
+message StylistResponse {
+  int32 id = 1;
+  string name = 2;
+  bool isDeleted = 3;
+}
+
+message ClientResponse {
+  int32 id = 1;
+  string name = 2;
+  StylistResponse stylist = 3;
+  bool isDeleted = 4;
+}
+
+message StylistRequest {
+  int32 id = 1;
+}
+
+service BeautySaloonService {
+  rpc GetStylistByID (StylistRequest) returns (StylistResponse);
+  rpc GetClientByID (ClientResponse) returns (ClientResponse);
+}
