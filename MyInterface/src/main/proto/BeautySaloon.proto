@@ -22,7 +22,11 @@ message StylistRequest {
   int32 id = 1;
 }
 
+message ClientRequest {
+  int32 id = 1;
+}
+
 service BeautySaloonService {
   rpc GetStylistByID (StylistRequest) returns (StylistResponse);
-  rpc GetClientByID (ClientResponse) returns (ClientResponse);
+  rpc GetClientByID (ClientRequest) returns (ClientResponse);
 }

@@ -6,13 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Server" />
+        <module name="Client" />
         <module name="MyInterface" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gRPC_BeautySaloon" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Client" options="" />
       <module name="MyInterface" options="-parameters" />
+      <module name="Server" options="" />
     </option>
   </component>
 </project>

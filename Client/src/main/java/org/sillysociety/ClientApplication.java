@@ -1,4 +1,4 @@
-package org.sillysociety.client;
+package org.sillysociety;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
