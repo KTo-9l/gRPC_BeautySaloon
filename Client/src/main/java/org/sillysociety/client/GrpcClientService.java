@@ -2,9 +2,9 @@ package org.sillysociety.client;
 
 
 import net.devh.boot.grpc.client.inject.GrpcClient;
-import org.sillysociety.beautysaloon.BeautySaloonServiceGrpc.BeautySaloonServiceBlockingStub;
-import org.sillysociety.beautysaloon.StylistRequest;
-import org.sillysociety.beautysaloon.StylistResponse;
+import org.sillysociety.BeautySaloonServiceGrpc.BeautySaloonServiceBlockingStub;
+import org.sillysociety.StylistRequest;
+import org.sillysociety.StylistResponse;
 import org.springframework.stereotype.Service;
 
 @Service

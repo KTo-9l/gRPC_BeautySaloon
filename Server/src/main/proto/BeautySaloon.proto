@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "org.sillysociety.beautysaloon";
+option java_package = "org.sillysociety";
 
-package org.sillysociety.beautysaloon;
+package org.sillysociety;
 
 message StylistResponse {
   int32 id = 1;

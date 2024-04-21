@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>org.sillysociety</groupId>
-            <artifactId>MyInterface</artifactId>
+            <artifactId>Server</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

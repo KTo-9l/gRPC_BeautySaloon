@@ -2,7 +2,7 @@ package org.sillysociety.server;
 
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
-import org.sillysociety.beautysaloon.*;
+import org.sillysociety.*;
 import org.sillysociety.models.Client;
 import org.sillysociety.models.Stylist;
 import org.sillysociety.service.ClientService;
@@ -23,7 +23,7 @@ public class BeautySaloonServiceImpl extends BeautySaloonServiceGrpc.BeautySaloo
     }
     private StylistResponse checkStylist(StylistRequest request) {
         Stylist stylist = stylistService.getById(request.getId());
-        if ((stylist != null) && (stylist.getDeleted())) {
+        if ((stylist != null) && (!stylist.getDeleted())) {
             return StylistResponse.newBuilder()
                     .setId(stylist.getId())
                     .setName(stylist.getName())
@@ -55,6 +55,6 @@ public class BeautySaloonServiceImpl extends BeautySaloonServiceGrpc.BeautySaloo
                     .setIsDeleted(client.getDeleted())
                     .build();
         }
-        return ClientResponse.newBuilder().setId(-1).setName("Client doesn't exist").build();
+        return ClientResponse.newBuilder().setId(-1).setName("Client doesn't exist").setIsDeleted(true).build();
     }
 }
