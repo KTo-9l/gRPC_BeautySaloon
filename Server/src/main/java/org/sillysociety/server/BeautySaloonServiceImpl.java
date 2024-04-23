@@ -40,7 +40,6 @@ public class BeautySaloonServiceImpl extends BeautySaloonServiceGrpc.BeautySaloo
     }
 
     private ClientResponse checkClient(ClientRequest request) {
-        // check client in DB
         Client client = clientService.getById(request.getId());
         if ((client != null) && (!client.getDeleted())) {
             Stylist stylist = client.getStylist();
