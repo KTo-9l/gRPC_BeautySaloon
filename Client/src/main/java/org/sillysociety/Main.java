@@ -20,13 +20,13 @@ public class Main {
                 case 1:
                     System.out.println("Enter id");
                     id = scanner.nextInt();
-                    System.out.println(grpcClient.getStylist(id));
+                    System.out.print(grpcClient.getStylist(id));
                     System.out.println("isDeleted = " + grpcClient.getStylist(id).getIsDeleted());
                     break;
                 case 2:
                     System.out.println("Enter id");
                     id = scanner.nextInt();
-                    System.out.println(grpcClient.getClient(id));
+                    System.out.print(grpcClient.getClient(id));
                     System.out.println("isDeleted = " + grpcClient.getClient(id).getIsDeleted());
                     break;
                 case 3:
