@@ -1,0 +1,5 @@
+Launch database:
+docker run -d --name beautysaloon_db dikobra3/db_beautysaloon:1.0
+
+Launch web-server:
+docker run -d --name beautysaloon -p 8080:8080 -p 9090:9090 --link beautysaloon_db dikobra3/beautysaloon:1.0

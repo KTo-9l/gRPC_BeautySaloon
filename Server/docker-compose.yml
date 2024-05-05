@@ -1,11 +1,5 @@
 version: "3"
 services:
-  beautysaloon_db:
-    image: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: beautysaloon
-
   beautysaloon:
     image: dikobra3/beautysaloon:v1.0
     environment:
@@ -15,3 +9,7 @@ services:
       - "9090:9090"
     depends_on:
       - beautysaloon_db
+  beautysaloon_db:
+    image: dikobra3/db_beautysaloon
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234

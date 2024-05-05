@@ -2,7 +2,7 @@ package org.sillysociety.models;
 
 import jakarta.persistence.*;
 @Entity
-@Table(name = "Stylist")
+@Table(name = "stylist")
 @NamedQuery(name = "Stylist.getAll", query = "SELECT s from Stylist s")
 public class Stylist {
     @Id
